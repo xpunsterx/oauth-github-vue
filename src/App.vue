@@ -1,5 +1,7 @@
 <template>
   <div id="app">
-    <router-view/>
+    <keep-alive exclude="UserView">
+      <router-view :key="$route.fullPath" />
+    </keep-alive>
   </div>
 </template>
