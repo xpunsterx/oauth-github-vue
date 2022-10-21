@@ -19,9 +19,9 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import { mapActions } from "vuex";
-import UserFullModel from "@/models/UserFullModel";
-import axios from "@/axios-instance";
+import { mapActions } from "vuex"
+import UserFullModel from "@/models/UserFullModel"
+import axios from "@/axios-instance"
 
 interface DataInterface {
   userData: UserFullModel;

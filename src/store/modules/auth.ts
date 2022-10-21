@@ -17,7 +17,7 @@ const state: State = {
 
 const getters = <GetterTree<State, any>>{
   isAuth: state => !!state.token
-};
+}
 
 const actions = <ActionTree<State, any>>{
   setCode({ commit }, value) {
@@ -37,7 +37,7 @@ const actions = <ActionTree<State, any>>{
 
     commit('SET_TOKEN', result)
   }
-};
+}
 
 const mutations = <MutationTree<State>>{
   SET_CODE (state, value) {
@@ -46,7 +46,7 @@ const mutations = <MutationTree<State>>{
   SET_TOKEN (state, value) {
     state.token = value
   },
-};
+}
 
 export default {
   namespaced: true,

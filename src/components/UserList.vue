@@ -20,12 +20,12 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
+import Vue from 'vue'
 import { mapActions } from 'vuex'
 import UserPreviewModel from '@/models/UserPreviewModel'
 import UserPreviewItem from '@/components/UserPreviewItem.vue'
 
-const PER_PAGE = 30;
+const PER_PAGE = 30
 
 interface DataInterface {
   users: UserPreviewModel[];
@@ -59,7 +59,7 @@ export default Vue.extend({
       return result.data.length
     },
     async infiniteHandler($state: any): Promise<void> {
-      const result = await this.getUsers();
+      const result = await this.getUsers()
       result > 0 ? $state.loaded() : $state.complete()
     },
     addUsers(list: UserPreviewModel[]): void {
@@ -67,7 +67,7 @@ export default Vue.extend({
         if (this.since < user.id) {
           this.since = user.id
         }
-        this.users.push(user);
+        this.users.push(user)
       })
     }
   },

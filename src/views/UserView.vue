@@ -12,5 +12,5 @@ export default Vue.extend({
   components: {
     UserFullItem
   }
-});
+})
 </script>

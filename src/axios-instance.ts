@@ -9,13 +9,12 @@ const instance = axios.create({
 
 instance.interceptors.request.use( config => {
     if (store.state.auth.token?.data && !!config.headers) {
-        const { access_token, token_type } = store.state.auth.token.data;
+        const { access_token, token_type } = store.state.auth.token.data
         config.headers['Authorization'] = `${token_type} ${access_token}`
     }
     return config;
 },  (error) => {
-
-    return Promise.reject(error);
-});
+    return Promise.reject(error)
+})
 
 export default instance

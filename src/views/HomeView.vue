@@ -35,5 +35,5 @@ export default Vue.extend({
     ...mapGetters('auth', ['isAuth']),
     ...mapState('auth', ['code']),
   }
-});
+})
 </script>
